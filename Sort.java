@@ -7,19 +7,20 @@ public class Sort{
     }
     return true;
   }
-  public static void mysort(int nums[]) {
+  public static void selectionSort(int nums[]) {
     for (int i = 0; i < nums.length; i ++) {
-      int lowestest = nums[i];
-      int index = 0;
-      int j = i;
-      for (j = i; j < nums.length; j++) {
-        if (nums[j] < nums[j - 1]) {
-          lowestest = nums[j];
+      int lowest = nums[i];
+      int index = i;
+      for (int j = i; j < nums.length; j++) {
+        if (nums[j] < lowest) {
+          lowest = nums[j];
           index = j;
         }
-    }
-    nums[j] = nums[i] + 0;
-    nums[i] = lowestest;
   }
+  int temp = nums[i];
+  nums[i] = nums[index];
+  nums[index] = temp;
+}
+
 }
 }
