@@ -1,4 +1,4 @@
-public class Sort{
+public class Sorts{
   public static boolean check(int nums[]) {
     for (int i = 1; i < nums.length; i++) {
       if (nums[i] < nums[i - 1]) {
@@ -26,9 +26,9 @@ public class Sort{
         }
   }
   // need a temporvary variable to allow a swap to happen
-  int temp = gata[i];
-  nums[i] = nums[index];
-  nums[index] = temp;
+  int temp = data[i];
+  data[i] = data[index];
+  data[index] = temp;
 }
 
 }
@@ -40,7 +40,7 @@ public class Sort{
   *@param data  the elements to be sorted.
   */
   public static void bubbleSort(int[] data){
-
+    
 
 
 }
