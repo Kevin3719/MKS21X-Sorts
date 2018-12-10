@@ -40,8 +40,18 @@ public class Sorts{
   *@param data  the elements to be sorted.
   */
   public static void bubbleSort(int[] data){
-    
-
-
+    boolean trigger = false;
+    while (trigger == false) {
+      trigger = true;
+      for(int i = 0; i < data.length - 1; i++) {
+        if (data[i] > data[i + 1]) {
+          trigger = false;
+          int temp = data[i];
+          data[i] = data[i + 1];
+          data[i + 1] = temp;
+        }
+      }
+    }
 }
+
 }
