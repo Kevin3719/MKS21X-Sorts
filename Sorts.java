@@ -40,12 +40,16 @@ public class Sorts{
   *@param data  the elements to be sorted.
   */
   public static void bubbleSort(int[] data){
+    //while trigger is false the loop will continue to run
     boolean trigger = false;
     while (trigger == false) {
+      // sets it to true every time it goes through all the numbers
       trigger = true;
       for(int i = 0; i < data.length - 1; i++) {
         if (data[i] > data[i + 1]) {
+          // sets trigger to false if there is a swap
           trigger = false;
+          // quick swap;
           int temp = data[i];
           data[i] = data[i + 1];
           data[i + 1] = temp;
