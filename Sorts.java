@@ -58,4 +58,25 @@ public class Sorts{
     }
 }
 
+  public static void insertionSort(int[] data) {
+    for (int j = 0; j < data.length; j++)
+      for(int i = 0; i < j; i++) {
+        if (num > data[i]) {
+          
+        }
+    }
+  }
+
+
+
+
+  }
+
+
+
+
+
+
+
+
 }
