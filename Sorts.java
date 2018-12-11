@@ -80,13 +80,18 @@ public class Sorts{
     }
   }
   public static void insertionSort(int[] data) {
+    // the loop that goes through all the numbers
     for (int i = 1; i < data.length; i++) {
         int original = data[i];
+        // c checks through all the numbers less than i
         int c = i;
-        while (c > 0 && original <= data[c]) {
+        // loops until it meets a number that isnt less than it
+        while (c > 0 && original < data[c - 1]) {
           data[c] = data[c - 1];
+          // decreases the number by one
           c--;
         }
+        // inserts the number there
         data[c] = original;
     }
 }
