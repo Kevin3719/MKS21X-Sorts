@@ -59,24 +59,24 @@ public class Sorts{
 }
 
   public static void insertionSort(int[] data) {
-    for (int j = 0; j < data.length; j++)
+    //creats a saver so it remenbers what numbers got displaced
+    int[] saver = new int[2];
+    //j goes through all the numbers;
+    for (int j = 1; j < data.length; j++)
+    // i go through the sorted portion
       for(int i = 0; i < j; i++) {
-        if (num > data[i]) {
-          
+        // loops through until it finds the spot
+        if (data[j] < data[i]) {
+          saver[0] = data[i];
+          data[i] = data[j];
+          //loop that displaces all the other numbers
+          for(int k = 1; i + k <= j;k++) {
+            saver[k % 2] = data[i + k];
+            data[i + k] = saver[(k - 1) % 2];
+          }
+          // ends the loop
+          i = j;
         }
     }
   }
-
-
-
-
-  }
-
-
-
-
-
-
-
-
 }
