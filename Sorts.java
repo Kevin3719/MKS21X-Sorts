@@ -58,7 +58,7 @@ public class Sorts{
     }
 }
 
-  public static void insertionSort(int[] data) {
+  public static void insertionSort2(int[] data) {
     //creats a saver so it remenbers what numbers got displaced
     int[] saver = new int[2];
     //j goes through all the numbers;
@@ -79,4 +79,20 @@ public class Sorts{
         }
     }
   }
+  public static void insertionSort(int[] data) {
+    for (int i = 1; i < data.length; i++) {
+        int original = data[i];
+        int c = i;
+        while (c > 0 && original <= data[c]) {
+          data[c] = data[c - 1];
+          c--;
+        }
+        data[c] = original;
+    }
 }
+
+
+
+
+
+  }

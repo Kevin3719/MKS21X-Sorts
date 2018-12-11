@@ -17,6 +17,9 @@ public class Driver{
     if(artie[1].equals("insertion")){
       Sorts.insertionSort(randish);
     }
+    if(artie[1].equals("insertion2")){
+      Sorts.insertionSort2(randish);
+    }
     if(artie[1].equals("test")){
       int[] randish2 = Arrays.copyOf(randish,randish.length);
       int[] randish3 = Arrays.copyOf(randish,randish.length);
